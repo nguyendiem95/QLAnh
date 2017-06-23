@@ -1,0 +1,86 @@
+body{font-family: arial;font-size: 12px;/* padding-top: 100px; */margin-left: 100px;background: #e9ebee;}
+.left{width: 450px; float: left;}
+.mains{width: 635px;float: left;  
+       margin-top: 1px; background-repeat: repeat-x;}
+ul{padding: 0px; margin: 0px; list-style: none}
+.new-product{ margin-left: 10px; margin-top: 5px; }
+.new-product ul{margin-top: 8px}
+.new-product ul li{margin-right: 10px}
+.new-product ul li .box{ border-radius: 5px; width: 200px; 
+                         float:left; margin-right: 5px}
+.new-product ul li .box .img{margin: 0 auto}
+.new-product ul li .box .content{margin-left: 2px;  margin-right: 2px;color: #6f6f6f}
+.new-product ul li .box .link a{ color: #f55701; text-decoration: none;}
+
+
+img#linh {
+    width: 375px;
+    background-color: #fff;
+    border: 4px solid #fff;
+    border-radius: 2px;
+}
+
+div#message {
+    font-family: inherit;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    text-rendering: optimizelegibility;
+    text-shadow: 0 0 3px rgba(0,0,0,.8);
+    font-weight: bold;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+}
+
+div#upload-wrap {margin-top: 20px;/* margin: 20px; */}
+
+input[type="submit"] {
+    -webkit-border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14pt;
+    padding: 5px 10px;
+}
+
+input[type="file"] {
+    -webkit-border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14pt;
+    padding: 5px 10px;
+}
+
+
+input[type="text"] {
+    -webkit-border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14pt;
+    padding: 5px 10px;
+}
+
+div#chon-wrap{
+    background-color: #eec111; 
+    border-radius: 10px; 
+    width: 375px; 
+    margin-top: 20px;
+}
+
+
+select#chon {
+    background: transparent;
+    border: none;
+    height: 40px;
+    padding: 5px;
+    width: 375px;
+    font-size: 14pt;
+}
+
+img#img {
+    display: inline;
+    width: 375px;
+    height: 250px;
+    margin-top: 20px;
+    -webkit-border-radius: 10px;
+}
+
+.trang-chu{
+    font-size: 14pt;
+}

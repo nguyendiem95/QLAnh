@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="css/a.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="home">
+        <div class="wrapper">
+            <jsp:include page="header.jsp"></jsp:include>
+                <div class="clearfix"></div>
+                <div class="clearfix"></div>
+                <div class="container_fullwidth">
+                    <div class="container">
+                        <div>
+                        <jsp:include page="search.jsp"></jsp:include>
+                        </div>
+
+                        <h3 class="title2"><strong>HOME</strong> <button class="glyphicon glyphicon-play text-center" style="background-color: #e20820;" type="button"></button> <strong>UPLOAD</strong></h3>
+                        <div class="col-md-8 col-xs-offset-2">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">Upload file</div>
+                                <div class="panel-body">
+                                <form method="post" action="${pageContext.request.contextPath}/sharefile/savefile.html" 
+                                           enctype="multipart/form-data" commandName="file">
+                                    <div class="row" style="margin-top:5px;">
+                                        <div class="col-md-3">Tiêu đề :</div>
+                                        <div class="col-md-9"><input path="Name" class="form-control"/></div>
+                                    </div>
+                                    <div class="row" style="margin-top:5px;">
+                                        <div class="col-md-3">Danh mục :</div>
+                                        <div class="col-md-9">
+                                            <checkbox path="Topic" value="Công nghệ thông tin"/>Công nghệ thông tin
+                                            <checkbox path="Topic" value="Đa phương tiện"/>Đa phương tiện
+                                            <checkbox path="Topic" value="Kinh tế"/>Kinh tế
+                                            <checkbox path="Topic" value="Khác"/>Khác
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top:5px;">
+                                        <div class="col-md-3">Mô tả ngắn :</div>
+                                        <div class="col-md-9"><input path="Description" class="form-control"/></div>
+                                    </div>
+                                    <div class="row" style="margin-top:5px;">
+                                        <div class="col-md-3">Upload file :</div>
+                                        <div class="col-md-9"><input id = "file" type="file" name="file"
+                                                                     onchange="previewFile()" /> <br /></br>
+                                            <br /> <img id="img" src="" width="500px" height="300px"
+                                                        alt="prpreviewImage">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row" style="margin-top:5px;">
+                                        <div class="col-md-5"></div>
+                                        <div class="col-md-7"><input type="submit" value="UPLOAD" class="btn btn-primary"></br></br>
+                                            <a href="${pageContext.request.contextPath}/home/index.html"><input type="submit" value="Hủy bỏ" class="btn btn-danger"></a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <jsp:include page="footer.jsp"></jsp:include>
+            </div>
+
+
+            <script>
+                function previewFile() {
+                    var url = "";
+                    var file = document.getElementById("file").files[0]; //sames as here
+                    var reader = new FileReader();
+                    reader.onloadend = function () {
+                        url = reader.result;
+                        document.getElementById("img").src = url;
+                    }
+                    if (file) {
+                        reader.readAsDataURL(file);
+                    } else {
+                    }
+                }
+
+                function test() {
+                    var file = document.getElementById("file");
+                    if (file.value == "") {
+                        window.alert("Không để trống dữ liệu");
+                        file.focus();
+                        return false;
+                    }
+                }
+            </script>
+    </body>
+</html>
